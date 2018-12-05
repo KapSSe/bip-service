@@ -1,0 +1,90 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+.statistics{
+    position: relative;
+    padding-top:200px;
+    &__heading{
+        margin-top:138px;
+        width: 100%;
+        text-align: center;
+        color:$color-darkblue;
+    }
+    &__background{
+        position: absolute;
+        right: 99px;
+    }
+    &__desc{
+        margin-top:94px;
+        p {
+            text-align: center;
+        }
+    }
+    &__blocks{
+        margin-top:113px;
+        text-align: left;
+    }
+    &__block{
+        padding: 22px;
+        box-sizing: border-box;
+        border: 2px solid $color-darkblue;
+        border-radius: 10px;
+        height: 100%;
+        color:$color-darkblue;
+        .heading{
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .statistics{
+        padding-top: 0px;
+        &__heading{
+            margin-top: 89px;
+        }
+        &__background{
+            right: 0;
+        }
+        &__desc{
+            margin-top: 71px;
+        }
+        &__blocks{
+            margin-top: 50px;
+        }
+        &__block{
+            padding: 34px;
+            .heading{
+                margin-top:0px;
+                margin-bottom: 7px;
+            }
+        }
+        &__blockwrap{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .statistics{
+        padding-top: 70px;
+        &__background{
+            display: none;
+        }
+        &__heading{
+            margin-top: 0px;
+        }
+        &__desc{
+            margin-top:40px;
+        }
+        &__blocks{
+            margin-top: 40px;
+        }
+        &__block{
+            padding: 14px;
+
+        }
+    }
+}

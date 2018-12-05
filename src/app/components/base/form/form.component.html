@@ -1,0 +1,69 @@
+<form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <h2 class="form__heading f-1" [innerHtml]="data.heading"></h2>
+  <div class="form-group form-group-text">
+    <input class="t-2" ngModel #name="ngModel"
+      [name]="data.model.name.name" 
+      [type]="data.model.name.type" 
+      [id]="data.model.name.name"
+      [required]="data.model.name.required">
+    <label class="t-5" [for]="data.model.name.name" [innerHtml]="data.model.name.placeholder"></label>
+    <div [class.form__hidden]="name.valid || name.pristine" class="form__error">
+      <span class="message t-5" [innerHtml]="data.model.name.error"></span>
+    </div>
+  </div>
+  <div class="form-group form-group-text">
+    <input class="t-2" ngModel  #email="ngModel"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+      [name]="data.model.email.name" 
+      [type]="data.model.email.type" 
+      [id]="data.model.email.name" 
+      [required]="data.model.email.required">
+    <label class="t-5" [for]="data.model.email.name" [innerHtml]="data.model.email.placeholder"></label>
+    <div [class.form__hidden]="email.valid || email.pristine" class="form__error">
+      <span class="message t-5" [innerHtml]="data.model.email.error"></span>
+    </div>
+  </div>
+  <div class="form-group form-group-text">
+    <input class="t-2" ngModel #phone="ngModel"
+      minlength="6"
+      pattern="^\+(?:[0-9] ?){6,14}[0-9]$"
+      [name]="data.model.phone.name" 
+      [type]="data.model.phone.type" 
+      [id]="data.model.phone.name" 
+      [required]="data.model.phone.required">
+    <label class="t-5" [for]="data.model.phone.name" [innerHtml]="data.model.phone.placeholder"></label>
+    <div [class.form__hidden]="phone.valid || phone.pristine" class="form__error">
+      <span class="message t-5" [innerHtml]="data.model.phone.error"></span>
+    </div>
+  </div>
+  <div class="form-bot">
+    <div class="form-group form-group-check">
+      <input class="t-2" ngModel #offer="ngModel"
+        [name]="data.model.offers.name" 
+        [type]="data.model.offers.type" 
+        [id]="data.model.offers.placeholder" 
+        (change)="updateCheckbox($event,offer)"
+        [required]="data.model.offers.required">
+      <label class="t-5" [for]="data.model.offers.placeholder" [innerHtml]="data.model.offers.placeholder"></label>
+    </div>
+    <div class="form-group form-group-check">
+      <input class="t-2" ngModel checked disabled
+        [name]="data.model.policy.name" 
+        [type]="data.model.policy.type" 
+        [id]="data.model.policy.placeholder">
+      <label class="t-5" [for]="data.model.policy.placeholder" [innerHtml]="data.model.policy.placeholder"></label>
+    </div>
+  </div>
+  <button type="submit" class="btn" type="submit">
+    <ng-container *ngIf="!submitting">
+      <span class="h-4" [innerHtml]="data.button"></span>
+    </ng-container>
+    <ng-container *ngIf="submitting">
+      <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </ng-container>
+  </button>
+</form>

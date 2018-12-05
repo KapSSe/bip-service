@@ -1,0 +1,148 @@
+.btn, a.lbtn {
+    max-width: 315px;
+    font-size: inherit;
+    width: 100%;
+    height: 52px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    background: $color-green;
+    transition: $background-transition;
+    & span{
+        color: $color-white;
+    }
+    &:before, &:after{
+        content: "";
+    }
+    &:hover{
+        background: darken($color-green, 10);
+    }
+}
+
+.scrollTop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    background: $color-green;
+    color:$color-white;
+    transform: translateX(200%);
+    transition: 635ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    border-radius: 50%;
+    &_active{
+        transform: translateX(0%);
+    }
+    &:hover{
+        background: darken($color-green, 10);
+        svg{
+            animation: jumpArrow 2350ms infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+    }
+}
+
+@keyframes jumpArrow{
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(-15%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    75%{
+        transform: translateY(-15%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.img-scale{
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+     img:hover {
+        transform: scale(1.1);
+        transition: 0.535s transform ease;
+     }
+     img{
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: 0.535s transform ease;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
+     }
+}
+
+.faq{
+    .icon{
+        display: flex;
+        transition: $faq-transition;
+        &-open{
+            transform-origin: center center;
+            transform: rotate(45deg);
+            .faq-circle{
+                stroke:$color-green;
+            }
+            .faq-cross{
+                stroke:$color-green;
+            }
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .scrollTop{
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        bottom: 10px;
+        svg{
+            max-width: 16px;
+        }
+        &:hover{
+            svg{
+                animation: none;
+            }
+        }
+    }
+}
+
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .about{
+        .card{
+            &__icon{
+            
+                svg{
+                    max-width: 30px;
+                }
+            }
+        }
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

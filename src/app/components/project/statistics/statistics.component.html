@@ -1,0 +1,33 @@
+<ng-container *ngIf="data | async; let data">
+  <section id="statistics" class="statistics">
+    <div class="container">
+      <div class="section__background statistics__background" [innerHTML]="data.statistics.background | safeHTML"></div>
+      <div class="row">
+        <div class="col-12">
+          <div class="heading statistics__heading">
+            <h2 class="h-3" [innerHTML]="data.statistics.heading"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="statistics__desc">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-12">
+            <p class="t-2" [innerHTML]="data.statistics.subheading"></p>
+          </div>
+        </div>
+      </div>
+      <div class="statistics__blocks">
+        <div class="row justify-content-center">
+          <ng-container *ngFor="let block of data.statistics.blocks; trackBy: trackByFn">
+            <div class="statistics__blockwrap col-xl-3 col-md-6">
+              <div class="statistics__block">
+                <h3 class="heading h-2" [innerHTML]="block.heading"></h3>
+                <p class="h-4" [innerHTML]="block.subheading"></p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>

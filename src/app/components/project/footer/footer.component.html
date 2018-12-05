@@ -1,0 +1,43 @@
+<ng-container *ngIf="data | async; let data">
+   <footer class="footer">
+     <div class="footer__nav">
+        <div class="container">
+            <div class="row">
+              <div class="col-xl-2 col-md-12">
+                <div class="logo" [innerHTML]="data.logo | safeHTML"></div>
+              </div>
+              <div class="col-xl-6 col-md-12">
+                <nav class="nav">
+                  <ng-container *ngFor="let navLink of data.navigation; trackBy: trackByFn">
+                    <a class="t-2" [ngx-scroll-to]="navLink.link" [innerHTML]="navLink.name"></a>
+                  </ng-container>
+                </nav>
+              </div>
+              <div class="col-xl-2 col-md-12">
+                  <div class="social">
+                    <ng-container *ngFor="let social of data.footer.social; trackBy: trackByFn">
+                        <a href="#" [innerHTML]="social.icon | safeHTML"></a>
+                    </ng-container>
+                  </div>
+              </div>
+            </div>  
+          </div>
+     </div>
+      <div class="footer__links">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-12">
+              <nav class="nav">
+                <ng-container *ngFor="let footerLink of data.footer.menu; trackBy: trackByFn">
+                  <a class="t-4" [href]="footerLink.link" [innerHTML]="footerLink.name"></a>
+                </ng-container>
+              </nav>
+            </div>
+            <div class="col-xl-7 col-12">
+                <p class="t-4 copy" [innerHTML]="data.footer.copy | safeHTML"></p>
+            </div>
+          </div>
+        </div>
+    </div>
+   </footer>
+</ng-container>

@@ -1,0 +1,119 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.fb142b856f5a8e6e7f96.js",
+        "/polyfills.f2908a422e0dfa3f3dd3.js",
+        "/runtime.ec2944dd8b20ec099bf3.js",
+        "/styles.724946644effca79740e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/styles/base/lib/grid/breakpoints/mixins/_breakpoints.scss",
+        "/assets/styles/base/lib/grid/grid.scss",
+        "/assets/styles/base/lib/grid/grid/_functions.scss",
+        "/assets/styles/base/lib/grid/grid/_grid.scss",
+        "/assets/styles/base/lib/grid/grid/_variables.scss",
+        "/assets/styles/base/lib/grid/grid/bootstrap-grid.scss",
+        "/assets/styles/base/lib/grid/grid/mixins/_breakpoints.scss",
+        "/assets/styles/base/lib/grid/grid/mixins/_grid-framework.scss",
+        "/assets/styles/base/lib/grid/grid/mixins/_grid.scss",
+        "/assets/styles/base/lib/grid/grid/utilities/_display.scss",
+        "/assets/styles/base/lib/grid/grid/utilities/_flex.scss",
+        "/assets/styles/base/lib/grid/layout/mixins/_visibility.scss",
+        "/assets/styles/base/lib/grid/layout/utilities/_display.scss",
+        "/assets/styles/base/lib/grid/layout/utilities/_spacing.scss",
+        "/assets/styles/base/lib/grid/layout/utilities/_visibility.scss",
+        "/assets/styles/base/lib/grid/sizing/utilities/_sizing.scss",
+        "/assets/styles/base/reset.scss",
+        "/assets/styles/project/_mixins.scss",
+        "/assets/styles/project/_typography.scss",
+        "/assets/styles/project/_variables.scss",
+        "/assets/styles/project/global.scss",
+        "/assets/styles/project/lib/modal.scss",
+        "/assets/styles/project/main.scss",
+        "/assets/styles/project/ui.scss"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/styles/base/lib/grid/breakpoints/mixins/_breakpoints.scss": "9e509d86f84301b6347119254c97561d4ccd26f2",
+    "/assets/styles/base/lib/grid/grid.scss": "a95ad3d0b4e3bd46b059ac8679e2939f125253a5",
+    "/assets/styles/base/lib/grid/grid/_functions.scss": "e2eaca80a34e3f26dbc004768adc30cea9e17d33",
+    "/assets/styles/base/lib/grid/grid/_grid.scss": "790b77e841dc68e087ea62eac6c161053a906fc5",
+    "/assets/styles/base/lib/grid/grid/_variables.scss": "5acdb891a6e946a913b1868bc01656fc96c29beb",
+    "/assets/styles/base/lib/grid/grid/bootstrap-grid.scss": "92e16c91b29eda7cefca72f4e2afe8ba6f650c8b",
+    "/assets/styles/base/lib/grid/grid/mixins/_breakpoints.scss": "9e509d86f84301b6347119254c97561d4ccd26f2",
+    "/assets/styles/base/lib/grid/grid/mixins/_grid-framework.scss": "8b9b1f8a46134aedaa0ee511f3fd8166e5cec4b4",
+    "/assets/styles/base/lib/grid/grid/mixins/_grid.scss": "8b68ca25282277b0e0d7229b0ec5a818430eaba4",
+    "/assets/styles/base/lib/grid/grid/utilities/_display.scss": "f150f5a8f8584e08cb32079abe8ee45ec742a1b4",
+    "/assets/styles/base/lib/grid/grid/utilities/_flex.scss": "664e5b1d89862cc4c1f6cbf37f8e12406154b816",
+    "/assets/styles/base/lib/grid/layout/mixins/_visibility.scss": "66a6da443fc67ea6f1febd1ba3b38c5b25f920f5",
+    "/assets/styles/base/lib/grid/layout/utilities/_display.scss": "f150f5a8f8584e08cb32079abe8ee45ec742a1b4",
+    "/assets/styles/base/lib/grid/layout/utilities/_spacing.scss": "75069657749ed749a2409b2dcee6920be859576a",
+    "/assets/styles/base/lib/grid/layout/utilities/_visibility.scss": "c2e008b6d93c47ba7593660b942aea51945f6467",
+    "/assets/styles/base/lib/grid/sizing/utilities/_sizing.scss": "fcaed0e1f57ad441fbd18dc4b765ad69753d11b3",
+    "/assets/styles/base/reset.scss": "2fc54d8212077a8997aaa0add10a57210957dd67",
+    "/assets/styles/project/_mixins.scss": "6eb3b51c96a88b85186e7033b30447b249fa1947",
+    "/assets/styles/project/_typography.scss": "09b8ae571b454ceeabe593c79b3f1ee9142338ba",
+    "/assets/styles/project/_variables.scss": "7a10aa033792e62eef03ae266f69134bfc111093",
+    "/assets/styles/project/global.scss": "f765f192932207d57005f053e1afba893d1f7b13",
+    "/assets/styles/project/lib/modal.scss": "690c4670d1778ce4b974b730d3f69bd1d32d07ce",
+    "/assets/styles/project/main.scss": "1a05312894b4132bd961efe60626896edc5a5d11",
+    "/assets/styles/project/ui.scss": "7f71ccd13e7a5da995334c3f5f40ada566e22533",
+    "/favicon.ico": "21002c380e21a26d399886f1640b2398cd109613",
+    "/index.html": "b2afaefc1075017773b8a2a55c6f3eca7f12fa53",
+    "/main.fb142b856f5a8e6e7f96.js": "f17cff4e310c50e3d6bc563fc0b57ccca253f4ad",
+    "/polyfills.f2908a422e0dfa3f3dd3.js": "c72aaf6f380a3ad0b2fd6cb953182e7f69280c29",
+    "/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.724946644effca79740e.css": "6c489f26cddc42738bb08271f8d27db0c6154bed"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

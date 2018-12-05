@@ -1,0 +1,15 @@
+<ng-container *ngIf="data | async; let data">
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section__background services__background" [innerHTML]="data.services.background | safeHTML"></div>
+      <div class="row">
+        <div class="col-12">
+          <div class="heading services__heading">
+            <h2 class="h-3" [innerHTML]="data.services.heading"></h2>
+          </div>
+        </div>
+      </div>
+     <app-tabswidget [data]="data.services.tabs" [active]="0"></app-tabswidget>
+    </div>
+  </section>
+</ng-container>

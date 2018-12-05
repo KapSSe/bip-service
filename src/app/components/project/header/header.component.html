@@ -1,0 +1,62 @@
+<ng-container *ngIf="data | async; let data">
+
+  <header id="header" class="header">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-2">
+          <div class="logo" [innerHTML]="data.logo | safeHTML"></div>
+        </div>
+        <ng-container *ngIf="!isMobile">
+          <div class="col-xl-6 col-7">
+            <nav class="nav">
+              <ng-container *ngFor="let navLink of data.navigation">
+                <a class="t-2" [ngx-scroll-to]="navLink.link" [innerHTML]="navLink.name"></a>
+              </ng-container>
+            </nav>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="isMobile">
+          <button class="header__button" (click)="ngxSmartModalService.getModal('myModal').open()">
+            <svg width="17px" height="10px" viewBox="0 0 17 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="menu" fill="#146BC0">
+                  <g id="Group-27">
+                    <rect id="Rectangle-5" x="0" y="0" width="17" height="2" rx="1"></rect>
+                    <rect id="Rectangle-5-Copy" x="0" y="4" width="17" height="2" rx="1"></rect>
+                    <rect id="Rectangle-5-Copy-2" x="0" y="8" width="17" height="2" rx="1"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </ng-container>
+      </div>
+    </div>
+  </header>
+
+  <ngx-smart-modal #myModal [customClass]="'modal nsm-dialog-animation-rtl'" [closable]="false" identifier="myModal">
+    <button class="modal_close" (click)="myModal.close()">
+      <span class="line line_top"></span>
+      <span class="line line_bot"></span>
+    </button>
+    <nav class="nav">
+      <ng-container *ngFor="let navLink of data.navigation; trackBy: trackByFn" >
+        <div class="overflow-hidden nav__link">
+          <a class="t-1 fadeInOut" [ngx-scroll-to]="navLink.link" (click)="myModal.close()" [innerHTML]="navLink.name"></a>
+        </div>
+      </ng-container>
+    </nav>
+    <div class="overflow-hidden">
+      <div class="mail fadeInOut">
+        <a class="t-2" href="mailto:bip-service@email.com">bip-service@email.com</a>
+      </div>
+    </div>
+    <div class="social overflow-hidden fadeInOut">
+      <ng-container *ngFor="let social of data.footer.social; trackBy: trackByFn">
+        <a class="fadeInOut" href="#" [innerHTML]="social.icon | safeHTML"></a>
+      </ng-container>
+    </div>
+  </ngx-smart-modal>
+
+</ng-container>

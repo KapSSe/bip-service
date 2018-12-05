@@ -1,0 +1,107 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+
+.widget{
+    &__tabs{
+        margin-top: 168px;
+        text-transform: capitalize;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__tab{
+        padding: 44px 0px;
+        box-sizing: border-box;
+        border: 2px solid $color-darkblue;
+        background: $color-white;
+        color:$color-darkblue;
+        cursor: pointer;
+        &_active{
+            background: $color-green;
+            color:$color-white;
+            border: 2px solid $color-green;
+        }
+    }
+    &__desc{
+        margin-top: 83px;
+        position: relative;
+        min-height: 100px;
+        p {
+            position: absolute;
+            text-align: center;
+        }
+    }
+    &__blocks{
+        margin-top: 98px;
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        &_active{
+
+        }
+    }
+    &__icon{
+        width: 127px;
+        height: 127px;
+        background: $color-grey;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__info{
+        margin-top: 45px;
+        text-align: center;
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+   .widget{
+       &__tabs{
+            margin-top: 132px;
+       }
+       &__tab{
+        padding: 39px 0px;
+       }
+       &__blocks{
+        margin-top: 60px;
+       }
+       &__block{
+           margin-bottom: 45px;
+       }
+       &__info{
+        margin-top: 25px;
+       }
+    }
+ }
+
+ @include if-smaller-than($breakpoint-name: sm) {
+     .widget{
+         &__tabs{
+            margin-top: 59px;
+         }
+         &__tab{
+            padding: 18px 0px;
+         }
+         &__desc{
+            margin-top: 52px;
+         }
+         &__blocks{
+            margin-top: 35px;
+         }
+         &__block{
+            margin-bottom: 35px;
+         }
+         &__icon{
+            transform: scale(0.85);
+         }
+         &__info{
+            margin-top: 14px;
+         }
+     }
+ }

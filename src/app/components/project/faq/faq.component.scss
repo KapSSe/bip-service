@@ -1,0 +1,78 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+.faq{
+    position: relative;
+    padding-top:200px;
+    &__heading{
+        margin-top:185px;
+        width: 100%;
+        text-align: center;
+        color:$color-darkblue;
+    }
+    &__background{
+        position: absolute;
+        left: 97px;
+    }
+    &__blocks{
+        margin-top:218px;
+        overflow: hidden;
+    }
+    &__button{
+        position: relative;
+        z-index: 2;
+        padding: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $color-white;
+        border: none;
+        border-top: 1px solid $color-green;
+        cursor: pointer;
+        outline: none;
+        text-align: left;
+    }
+    &__icon{
+        display: flex;
+    }
+    &__info{
+        padding-bottom: 28px;
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .faq{
+        padding-top: 0px;
+        &__heading{
+            margin-top: 170px;
+        }
+        &__background{
+            left: 0;
+        }
+        &__blocks{
+            margin-top: 135px;
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .faq{
+        padding-top: 60px;
+        &__background{
+            display: none;
+        }
+        &__heading{
+            margin-top: 0px;
+        }
+        &__blocks{
+            margin-top: 58px;
+        }
+        &__button{
+            padding-top: 17px;
+            padding-bottom: 17px;
+        }
+    }
+}

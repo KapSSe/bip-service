@@ -1,0 +1,84 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+.benefits{
+    position: relative;
+    padding-top:200px;
+    &__heading{
+        margin-top:168px;
+        width: 100%;
+        text-align: center;
+        color:$color-darkblue;
+    }
+    &__background{
+        position: absolute;
+        left: 94px;
+    }
+    &__blocks{
+        margin-top:196px;
+    }
+    &__row{
+        margin-top:10px;
+        margin-bottom: -36px;
+    }
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+    &__block{
+        display: flex;
+        margin-bottom: 36px;
+    }
+    &__icon{
+        margin-right: 30px;
+    }
+    &__info{
+        .heading{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .benefits{
+        padding-top: 0px;
+        &__background{
+            left: 0;
+        }
+        &__heading{
+            margin-top: 120px;
+        }
+        &__blocks{
+            margin-top: 112px;
+        }
+        &__imgblock{
+            display:none;
+        }
+        &__row{
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .benefits{
+       padding-top:45px;
+       &__background{
+        display: none;
+       }
+       &__heading{
+        margin-top: 0px;
+       }
+       &__blocks{
+        margin-top: 58px;
+       }
+       &__block{
+        margin-bottom: 22px;
+       }
+       &__info{
+           .heading{
+                margin-bottom: 10px;
+           }
+       }
+    }
+}

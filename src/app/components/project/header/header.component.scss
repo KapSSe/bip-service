@@ -1,0 +1,41 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+.header{
+    position: relative;
+    padding: 45px 0px 39px 0px; 
+    font-family: $font-muli;
+    font-weight: light;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+        color:$color-black;
+        transition: $link-transition;
+    }
+    a:hover{
+        color:$color-green;
+    }
+}
+
+.header{
+    &__button{
+        margin-right: 8px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .header{
+        padding: 12px 0px;
+    }
+    .logo{
+        transform: scale(0.8);
+    }
+}

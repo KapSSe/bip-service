@@ -1,0 +1,50 @@
+<ng-container *ngIf="data | async; let data">
+  <section 
+    id="about" 
+    class="about">
+    <div class="container">
+      <div class="section__background about__background stg" [innerHTML]="data.about.background | safeHTML"></div>
+      <div class="row justify-content-center stg">
+        <div class="col-12">
+          <div class="heading about__heading">
+            <h2 class="h-3" [innerHTML]="data.about.heading"></h2>
+          </div> 
+        </div>
+        <div class="col-xl-8 col-12">
+          <div class="about__desc">
+            <p class="t-2" [innerHTML]="data.about.subheading"></p>
+          </div>
+        </div>
+      </div>
+      <div [scrollAnchor]="scrollTopBtn" class="about__blocks stg">
+        <div class="row justify-content-center">
+          <ng-container *ngFor="let block of data.about.blocks; trackBy: trackByFn">
+            <div class="card__wrap col-xl-4 col-md-6">
+              <div class="card">
+                <div class="card__head">
+                  <div class="img-scale">
+                    <img [src]="block.image" alt="service worker">
+                  </div>
+                  <div class="card__icon" [innerHTML]="block.icon | safeHTML"></div>
+                </div>
+                <h3 class="card__heading h-4" [innerHTML]="block.heading"></h3>
+                <p class="card__text t-3" [innerHTML]="block.text"></p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button class="scrollTop" [ngx-scroll-to]="'header'" #scrollTopBtn>
+    <svg width="28px" height="16px" viewBox="0 0 28 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Land-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+          <g transform="translate(-11.000000, -16.000000)" stroke="#FFFFFF" stroke-width="3">
+              <g>
+                  <polyline id="Path-2" transform="translate(25.000000, 24.000000) rotate(-90.000000) translate(-25.000000, -24.000000) " points="19 12 31 24 19 36"></polyline>
+              </g>
+          </g>
+      </g>
+    </svg>
+  </button>
+</ng-container>

@@ -1,0 +1,136 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+.footer{
+    position: relative;
+    &__nav{
+        padding-top:66px;
+        padding-bottom: 70px;
+        background: $color-darkblue;
+        border-bottom: 8px solid $color-green;
+        .row{
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav{
+            display: flex;
+            justify-content: flex-end;
+            a {
+                margin-left: 35px;
+                text-decoration: none;
+                color: $color-white;
+                transition: $link-transition;
+                &:hover{
+                    color: $color-green;
+                }
+            }
+            :first-child{
+                margin-left: 0;
+            }
+        }
+        .social{
+            display: flex;
+            justify-content: flex-end;
+            a {
+                margin-left: 25px;
+            }
+            :first-child{
+                margin-left: 0;
+            }
+        }
+    }
+    &__links{
+        padding: 30px 0px;
+        a {
+            color: $color-darkblue;
+            text-decoration: none;
+        }
+        .nav{
+            display: flex;
+            justify-content: flex-start;
+            a {
+                margin-right: 25px;
+                color: $color-darkblue;
+                transition: $link-transition;
+                &:hover{
+                    color: $color-green;
+                }
+            }
+            :last-child{
+                margin-right: 0;
+            }
+        }
+        .copy{
+            text-align: right;
+            color: $color-darkblue;
+        }
+    }
+    .logo_name{
+        fill: $color-white;
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .footer{
+        &__nav{
+            padding: 40px 0px;
+            border-bottom:none;
+            .logo{
+                margin-bottom: 30px;
+               text-align: center;
+            }
+            .nav{
+                justify-content: center;
+                margin-bottom: 35px;
+                a {
+                    margin-left: 20px;
+                }
+            }
+            .social{
+                justify-content: center;
+            }
+        }
+        &__links{
+            .nav{
+                margin-bottom: 20px;
+                justify-content: center;
+                a {
+                    margin-right: 15px;
+                }
+            }
+            .copy {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .footer{
+        &__nav{
+            padding: 28px 0px;
+            .logo{
+                transform: scale(0.8);
+                margin-bottom: 20px;
+            }
+            .nav{
+                margin-bottom: 23px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                a {
+                    margin-bottom: 5px;
+                    margin-left:0px;
+                }
+            }
+        }
+        &__links{
+            .copy{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+    }
+}

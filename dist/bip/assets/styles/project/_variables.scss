@@ -1,0 +1,38 @@
+
+//Fonts variables;
+$font-muli: Muli, sans-serif;
+$font-openSans: Open Sans, sans-serif;
+
+//Font sizes
+$base-size: 21px;
+
+//Color variables;
+$color-white: #fff;
+$color-grey:rgba(#E6E6E6,0.3);
+$color-blue: #1a45ad;
+$color-darkblue: #146BC0;
+$color-black: #4A4A4A;
+$color-green: #14BE82;
+$color-red: red;
+
+//Animations:
+$link-transition: 0.635s color cubic-bezier(0.165, 0.84, 0.44, 1);
+$fill-transition: 0.635s fill cubic-bezier(0.165, 0.84, 0.44, 1);
+$faq-transition: 0.335s transform cubic-bezier(0.165, 0.84, 0.44, 1);
+$background-transition: 0.465s background-color cubic-bezier(0.77, 0, 0.175, 1);
+
+//Responsive sizes
+$breakpoints: (
+    xxl: 1200px,
+    xl:1025px,
+    l: 992px,
+    sm:768px,
+    xs:480px,
+    xxs: 321px
+);
+
+$breakpointsVerical :(
+    s:520px,
+    m:620px
+);
+

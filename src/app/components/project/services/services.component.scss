@@ -1,0 +1,42 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+
+.services {
+    position: relative;
+    padding-top:200px;
+    &__heading{
+        margin-top:102px;
+        width: 100%;
+        text-align: center;
+        color:$color-darkblue;
+    }
+    &__background{
+        position: absolute;
+        right: 48px;
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+   .services{
+        padding-top: 0px;
+        &__background{
+            right: 0;
+        }
+        &__heading{
+            margin-top: 114px;
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .services{
+        padding-top: 37px;
+        &__background{
+            display: none;
+        }
+        &__heading{
+            margin-top: 0px;
+        }
+    }
+}

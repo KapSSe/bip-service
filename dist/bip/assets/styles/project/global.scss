@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:300');
+
+body{
+    font-size: $base-size;
+    @include webkit-scroll;
+    @include webkit-selection;
+}
+
+a {
+    cursor: pointer;
+}
+
+.container{
+    position: relative;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.header{
+    .logo{
+        &_text{
+            fill:$color-darkblue;
+        }
+    }
+}
+
+.heading{
+    position: relative;
+    :after{
+        display: block;
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -43px;
+        width: 200px;
+        height: 8px;
+        background: $color-green;
+    }
+}
+
+.footer{
+    .logo{
+        &_text{
+            fill:$color-white;
+        }
+        &_circle{
+            &_sm{
+                fill:$color-white;
+            }
+        }
+    }
+    .copy a{
+        text-decoration: none;
+        color: $color-darkblue;
+    }
+    .social{
+        a svg path {
+            transition: $fill-transition;
+        }
+        a:hover{
+            svg{
+                path{
+                    fill:$color-green;
+                }
+            }
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .section{
+        &__background{
+            transform: scale(0.55);
+        }
+    }
+}
+
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .heading{
+        position: relative;
+        :after{
+            display: block;
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -19px;
+            width: 150px;
+            height: 4px;
+            background: $color-green;
+        }
+    }
+}

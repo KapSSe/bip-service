@@ -1,0 +1,16 @@
+<ng-container *ngIf="data | async; let data">
+    <section class="map">
+        <div class="map__inner">
+            <agm-map [latitude]="lat" [longitude]="lng" [styles]="style" [streetViewControl]="false" [scrollwheel]="false" [disableDefaultUI]="true">
+                <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+            </agm-map>
+            <div class="form-container container">
+                <div class="row">
+                    <div class="col offset-xl-7 col-xl-5 offset-md-4 col-md-8">
+                        <app-form [formData]="data.form"></app-form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</ng-container>

@@ -1,0 +1,117 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+.about{
+    position: relative;
+    padding-top:156px;
+    &__heading{
+        margin-top:136px;
+        width: 100%;
+        text-align: center;
+        color:$color-darkblue;
+    }
+    &__desc{
+        margin-top: 86px;
+        text-align: center;
+    }
+    &__background{
+        position: absolute;
+        left: 145px;
+    }
+    &__blocks{
+        margin-top: 60px;
+    }
+    .card{
+        height: 100%;
+        box-shadow: 10px 20px 60px 0 rgba(0,0,0,0.06);
+        border-radius: 10px;
+        overflow: hidden;
+        &__head{
+            position: relative;
+            display: flex;
+        }
+        &__icon{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(-50%,50%);
+            background: $color-green;
+            border-radius: 50%;
+        }
+        &__heading{
+            margin-top:74px;
+            text-align: center;
+            color:$color-green;
+        }
+        &__text{
+            margin-top:30px;
+            padding: 0 39px;
+            padding-bottom: 35px;
+            text-align: center;
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .about{
+        padding-top: 0px;
+        &__heading{
+            margin-top: 98px;
+        }
+        &__background{
+            left: 0;
+        }
+        .card{
+            &__heading{
+                margin-top: 60px;
+            }
+            &__wrap{
+                margin-bottom:35px;
+            }
+            &__text{
+                margin-top: 20px;
+            }
+            &__icon{
+                width: 88px;
+                height: 88px;
+            }
+        }
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .about{
+        padding-top: 37px;
+        &__background{
+            display: none;
+        }
+        &__heading{
+            margin-top: 0px;
+        }
+        &__desc{
+            margin-top: 40px;
+        }
+        &__blocks{
+            margin-top: 50px;
+        }
+        .card{
+           &__heading{
+            margin-top: 50px;
+           }
+           &__text{
+            margin-top: 10px;
+            padding: 0 24px;
+            padding-bottom: 26px;
+           }
+           &__icon{
+            width: 68px;
+            height: 68px;
+           }
+        }
+    }
+}

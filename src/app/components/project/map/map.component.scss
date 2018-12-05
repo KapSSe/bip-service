@@ -1,0 +1,52 @@
+@import '~src/assets/styles/project/_mixins';
+@import '~src/assets/styles/project/_variables';
+
+
+.map{
+    position: relative;
+    padding-top:222px;
+    &__inner{
+        position: relative;
+    }
+}
+
+agm-map {
+    height: 660px;
+}
+
+.form-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:52px;
+}
+
+@include if-smaller-than($breakpoint-name: xl) {
+    .map{
+        padding-top:110px;
+    }
+}
+
+@include if-smaller-than($breakpoint-name: sm) {
+    .map{
+        padding-top:65px;
+        &__inner{
+            position: initial;
+            display: flex;
+            flex-direction: column;
+            agm-map{
+                order:2;
+            }
+            .form-container{
+                position: static;
+                left: 0;
+                transform: translateX(0%);
+                top: 0;
+                order:1;
+                .col{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}

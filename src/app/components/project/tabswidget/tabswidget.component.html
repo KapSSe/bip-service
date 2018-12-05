@@ -1,0 +1,32 @@
+<div class="widget__tabs">
+  <div class="row justify-content-center">
+    <ng-container *ngFor="let tab of data; trackBy: trackByFn; let i = index">
+      <div class="col-xl-3 col-md-4 col-6">
+        <div class="widget__tab" (click)="setActiveTab(i);" [class.widget__tab_active]="isActiveTab(i)">
+          <h3 class="h-4" [innerHTML]="tab.heading"></h3>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="widget__content">
+  <div class="widget__desc">
+    <div class="row justify-content-center">
+      <div class="col-xl-8 col-12">
+        <ng-container *ngFor="let tab of data;trackBy: trackByFn;let i = index">
+            <p class="t-2" [innerHTML]="tab.subheading" [@fade]="isActiveTab(i) ? 'fadeIn': 'fadeOut'"></p>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="widget__blocks">
+    <div class="row justify-content-center">
+        <div *ngFor="let block of data[active].blocks; trackBy: trackByFn; let i = index" class="col-xl-3 col-md-6" @listAnimation>
+          <div class="widget__block">
+            <div class="widget__icon" [innerHTML]="block.icon | safeHTML"></div>
+            <h4 class="widget__info h-4" [innerHTML]="block.heading"></h4>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

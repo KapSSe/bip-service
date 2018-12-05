@@ -1,0 +1,43 @@
+
+@mixin webkit-scroll {
+    overflow: hidden;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin webkit-selection {
+    ::selection {
+        background: $color-blue;
+        color: $color-white;
+    }
+}
+
+@mixin text-sizes ($fontSize, $lineHeight, $letterSpacing) {
+    font-size: px-em($fontSize);
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+@function px-em($target, $context: $base-size) {
+    @if $target == 0 { @return 0 }
+    @return $target / $context + 0em;
+}
+
+
+@mixin if-smaller-than($breakpoint-name) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint-name) - 1}) {
+        @content;
+    }
+}
+  
+  @mixin if-larger-than($breakpoint-name) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint-name)}) {
+      @content;
+    }
+}
+  
+  @mixin if-lower-than($breakpoint-name) {
+    @media (max-height: #{map-get($breakpointsVertical, $breakpoint-name)}) {
+      @content;
+    }
+}

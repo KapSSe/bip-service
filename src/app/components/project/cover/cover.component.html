@@ -1,0 +1,17 @@
+<ng-container *ngIf="data | async; let data">
+    <section class="cover" parallax [config]="parallaxConfig" [ngStyle]="{'background-image':'url(' + data.cover.background + ')'}">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="cover__content" @staggered>
+                        <h1 class="h-1 stg" [innerHTML]="data.cover.heading"></h1>
+                        <h2 class="t-1 stg" [innerHTML]="data.cover.subheading"></h2>
+                        <button class="btn stg">
+                            <span class="h-4" [innerHTML]="data.cover.button"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</ng-container>
